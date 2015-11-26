@@ -11,4 +11,13 @@ Usage: perl check_watchptTemp_winmod.pl -w <high warning temp> -c <high critical
 
 Default output is in Celsius, small edit explained in code required to change to Farenheit
 
-For usage/implementation with nagios please refer to the blog post above
+For usage/implementation with nagios please refer to the blog post above, although it is slighlty dated and soem of it is deprecated so i will include what the nsclient config changes should look like now
+
+You basically need to add the possibility to run external commands and a path to the file like so into your nsclient.ini with arguments;
+
+[/modules]
+CheckExternalScripts = enabled
+[/settings/external scripts/scripts]
+check_temp = C:\perl64\bin\perl.exe "C:\Program Files\NSClient++\scripts\check_watchptTemp_winmod.pl" -w 22 -c 25 -wm 18 -cm 10
+
+Tested with Nsclient++ Version 0.4.1.105-x64
