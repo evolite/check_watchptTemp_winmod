@@ -16,8 +16,11 @@ For usage/implementation with nagios please refer to the blog post above, althou
 You basically need to add the possibility to run external commands and a path to the file like so into your nsclient.ini with arguments;
 
 [/modules]
+
 CheckExternalScripts = enabled
+
 [/settings/external scripts/scripts]
+
 check_temp = C:\perl64\bin\perl.exe "C:\Program Files\NSClient++\scripts\check_watchptTemp_winmod.pl" -w 22 -c 25 -wm 18 -cm 10
 
 Tested with Nsclient++ Version 0.4.1.105-x64
