@@ -13,7 +13,7 @@ Default output is in Celsius, small edit explained in code required to change to
 
 For usage/implementation with nagios please refer to the blog post above, although it is slighlty dated and soem of it is deprecated so i will include what the nsclient config changes should look like now
 
-You basically need to add the possibility to run external commands and a path to the file like so into your nsclient.ini with arguments.
+You basically need to add the possibility to run external commands and a path to the file like so into your nsclient.ini with arguments. Then you can invoke the check_temp command with check_nrpe form nagios
 
     [/modules]
     CheckExternalScripts = enabled
