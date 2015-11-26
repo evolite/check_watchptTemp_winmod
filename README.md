@@ -7,8 +7,7 @@ It's modified form the original to no longer require an external config file, an
 
 Dependencies: Win32::SerialPort;
 
-Usage:
-    perl check_watchptTemp_winmod.pl -w <high warning temp> -c <high critical temp> -wm <low warning temp> -cm <low critical temp>  Optional: [-Com <ComPort>] Default: COM3
+    Usage: perl check_watchptTemp_winmod.pl -w <high warning temp> -c <high critical temp> -wm <low warning temp> -cm <low critical temp>  Optional: [-Com <ComPort>] Default: COM3
 
 Default output is in Celsius, small edit explained in code required to change to Farenheit
 
